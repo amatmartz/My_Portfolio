@@ -1,4 +1,4 @@
-# My-Portfolio
+# My Portfolio
 
 Welcome to my personal portfolio.  
 This repository contains the source code and selected work samples that showcase my **financial analysis, data visualization, and business intelligence** projects — integrating technology, strategy, and data-driven decision-making.
