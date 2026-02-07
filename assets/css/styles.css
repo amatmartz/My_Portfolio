@@ -241,6 +241,15 @@ img {
         color: var(--title-color);
 }
 
+
+.home__arrow {
+    position: absolute;
+    width: 60px;
+    top: 10px;
+    right: 60px;
+    transform: rotate(10deg);
+}
+
 .home__description {
         display: flex;
         align-items: flex-start;
@@ -849,6 +858,156 @@ img {
 .reveal.active {
         opacity: 1;
         transform: translateY(0);
+}
+
+
+/*=============== RESUME ===============*/
+.resume__container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+}
+
+.resume__content {
+    background-color: var(--container-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.resume__header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--first-color);
+}
+
+.resume__name {
+    font-family: var(--heading-font);
+    font-size: var(--h1-font-size);
+    font-weight: 900;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.resume__contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem 1.5rem;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: .25rem;
+}
+
+.resume__contact-info i {
+    color: var(--first-color);
+    margin-right: .25rem;
+}
+
+.resume__contact-info a {
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+}
+
+.resume__contact-info a:hover {
+    text-decoration: underline;
+}
+
+.resume__section {
+    margin-bottom: 2rem;
+}
+
+.resume__section-title {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: .5rem;
+    border-bottom: 1.5px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.resume__text {
+    font-size: var(--small-font-size);
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.resume__skills-list p {
+    font-size: var(--small-font-size);
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: .35rem;
+}
+
+.resume__item {
+    margin-bottom: 1.5rem;
+}
+
+.resume__item:last-child {
+    margin-bottom: 0;
+}
+
+.resume__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: .25rem;
+}
+
+.resume__item-header h5 {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+}
+
+.resume__date {
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+}
+
+.resume__institution {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    font-style: italic;
+    margin-bottom: .5rem;
+}
+
+.resume__detail {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: .25rem;
+}
+
+.resume__bullets {
+    list-style: none;
+    padding: 0;
+}
+
+.resume__bullets li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: .4rem;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.resume__bullets li::before {
+    content: '\25A0';
+    position: absolute;
+    left: 0;
+    color: var(--first-color);
+    font-size: .5rem;
+    top: 5px;
 }
 
 /*=============== BREAKPOINTS ===============*/
