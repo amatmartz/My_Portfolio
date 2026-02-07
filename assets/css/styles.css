@@ -244,10 +244,10 @@ img {
 
 .home__arrow {
     position: absolute;
-    width: 70px;
-    top: 40%;
-    left: -60px;
-    transform: rotate(-10deg);
+    width: 80px;
+    top: 15%;
+    left: -80px;
+    transform: rotate(5deg);
     z-index: 2;
 }
 
