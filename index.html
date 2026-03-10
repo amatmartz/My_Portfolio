@@ -146,6 +146,47 @@
                 background-color: #333;
                 border-color: #333;
             }
+            .project__viz-preview {
+                display: block;
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 16px rgba(0,0,0,.1);
+                margin-top: .25rem;
+                transition: transform .3s, box-shadow .3s;
+            }
+            .project__viz-preview:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 24px rgba(0,0,0,.15);
+            }
+            .project__viz-preview img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .project__viz-overlay {
+                position: absolute;
+                bottom: 0; left: 0; right: 0;
+                background: linear-gradient(transparent, rgba(0,0,0,.65));
+                color: #fff;
+                padding: .75rem 1rem;
+                font-size: var(--smaller-font-size);
+                font-weight: var(--font-medium);
+                display: flex;
+                align-items: center;
+                gap: .35rem;
+                opacity: 0;
+                transition: opacity .3s;
+            }
+            .project__viz-preview:hover .project__viz-overlay {
+                opacity: 1;
+            }
+            .project__viz-caption {
+                font-size: .7rem;
+                color: var(--text-color-light);
+                margin-top: .4rem;
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -514,6 +555,14 @@
                                                                                     I led the analysis comparing median sale prices for new builds vs. existing homes across all 32 postcode areas and years (672 combinations). Using Excel for calculations and Tableau for geographic mapping, I found that new builds command a premium in 27 of 32 areas — ranging from +140% in Westminster (W) to −7% in Romford (RM). Prime Central London postcodes (W, SW, WC) dominated the top 3, revealing that the new build premium is highly location-dependent, not universal.
                                                                                 </p>
                                                                             </div>
+
+                                                                            <a href="https://public.tableau.com/views/5UKNewBuildPremiumMap/UKPostcodePremium?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer" class="project__viz-preview">
+                                                                                <img src="https://public.tableau.com/static/images/5U/5UKNewBuildPremiumMap/UKPostcodePremium/1.png" alt="UK New Build Premium Map — Tableau visualization showing premium percentages by postcode area across England" loading="lazy">
+                                                                                <div class="project__viz-overlay">
+                                                                                    <i class="ri-external-link-line"></i> Open Interactive Dashboard
+                                                                                </div>
+                                                                            </a>
+                                                                            <p class="project__viz-caption">UK Postcode Premium Map — click to explore interactive version</p>
                                                                         </div>
 
                                                                         <!-- Right column: Key Findings + Links -->
