@@ -30,6 +30,123 @@
     
         <!-- Stylesheet -->
         <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- Featured Project Styles -->
+        <style>
+            .project__card--featured {
+                grid-column: 1 / -1;
+                border-left: 4px solid #e97627;
+                background: linear-gradient(135deg, var(--container-color) 0%, #f8f6f3 100%);
+                position: relative;
+                overflow: hidden;
+            }
+            .project__card--featured::before {
+                content: '';
+                position: absolute;
+                top: 0; right: 0;
+                width: 120px; height: 120px;
+                background: radial-gradient(circle at top right, rgba(233,118,39,.08) 0%, transparent 70%);
+                pointer-events: none;
+            }
+            .project__featured-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            @media (max-width: 768px) {
+                .project__featured-layout {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .project__featured-label {
+                display: inline-flex;
+                align-items: center;
+                gap: .35rem;
+                font-size: .7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: #e97627;
+                margin-bottom: .75rem;
+            }
+            .project__featured-label i {
+                font-size: .85rem;
+            }
+            .project__overview {
+                font-size: var(--small-font-size);
+                color: var(--text-color);
+                line-height: 1.7;
+                margin-bottom: 1rem;
+            }
+            .project__my-role {
+                background: rgba(233,118,39,.06);
+                border-radius: 8px;
+                padding: 1rem 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+            .project__my-role-title {
+                font-size: var(--small-font-size);
+                font-weight: var(--font-bold);
+                color: var(--title-color);
+                margin-bottom: .5rem;
+            }
+            .project__my-role p {
+                font-size: var(--smaller-font-size);
+                color: var(--text-color);
+                line-height: 1.65;
+            }
+            .project__key-findings {
+                margin-bottom: 1rem;
+            }
+            .project__key-findings-title {
+                font-size: var(--small-font-size);
+                font-weight: var(--font-bold);
+                color: var(--title-color);
+                margin-bottom: .5rem;
+            }
+            .project__badges-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+                margin-bottom: .5rem;
+            }
+            .project__badge--team {
+                background-color: #2c3e50;
+            }
+            .project__resource-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .6rem;
+                margin-top: 1rem;
+            }
+            .project__resource-link {
+                display: inline-flex;
+                align-items: center;
+                gap: .35rem;
+                color: var(--title-color);
+                font-size: var(--smaller-font-size);
+                font-weight: var(--font-medium);
+                border: 1.5px solid var(--title-color);
+                padding: .35rem .85rem;
+                border-radius: 20px;
+                transition: background-color .3s, color .3s, transform .2s;
+                text-decoration: none;
+            }
+            .project__resource-link:hover {
+                background-color: var(--title-color);
+                color: #fff;
+                transform: translateY(-2px);
+            }
+            .project__resource-link--primary {
+                background-color: var(--title-color);
+                color: #fff;
+                border-color: var(--title-color);
+            }
+            .project__resource-link--primary:hover {
+                background-color: #333;
+                border-color: #333;
+            }
+        </style>
     </head>
 
 <body>
@@ -369,24 +486,66 @@
                         </div>
                                                                 </article>
                                             
-                                                                <!-- Project 5 -->
-                                                                <article class="project__card">
-                                                                                        <div class="project__header">
-                                                                                                                    <span class="project__badge project__badge--excel">Excel</span>
-                                                                                                                    <span class="project__type">Data Analysis & Team Project</span>
-                                                                                            </div>
-                                                                                        <h3 class="project__title">UK New Build Property Premium Analysis</h3>
-                                                                                        <ul class="project__highlights">
-                                                                                                                    <li>Analyzed new build property premiums across UK postcode areas</li>
-                                                                                                                    <li>Found new builds command a median premium of ~16.7%</li>
-                                                                                                                    <li>Advanced Excel formulas for postcode extraction and price cleaning</li>
-                                                                                                                    <li>Part of 5-person DAA internship team project</li>
-                                                                                            </ul>
-                                                                                        <div class="project__links">
-                                                                                                                    <a href="https://github.com/amatmartz" target="_blank" rel="noopener noreferrer" class="project__link">
-                                                                                                                                                    <i class="ri-external-link-line"></i> View Write-Up
-                                                                                                                        </a>
-                                                                                            </div>
+                                                                <!-- Project 5 — Featured Team Internship -->
+                                                                <article class="project__card project__card--featured">
+                                                                    <div class="project__featured-label">
+                                                                        <i class="ri-star-fill"></i> Featured Team Project — DAA Internship
+                                                                    </div>
+                                                                    <div class="project__header">
+                                                                        <div class="project__badges-row">
+                                                                            <span class="project__badge project__badge--excel">Excel</span>
+                                                                            <span class="project__badge project__badge--sql">SQL</span>
+                                                                            <span class="project__badge project__badge--tableau">Tableau</span>
+                                                                            <span class="project__badge project__badge--team">Team</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h3 class="project__title">UK Property Sales Trends (1995–2025)</h3>
+
+                                                                    <div class="project__featured-layout">
+                                                                        <!-- Left column: Overview + My Role -->
+                                                                        <div>
+                                                                            <p class="project__overview">
+                                                                                As part of a 5-person team in the Data Analytics Accelerator internship, we analyzed 51,000+ UK property transactions spanning 30 years across 32 postcode areas. The project explored price trends, property types, tenure comparisons, holding periods, new build premiums, and the impact of economic shocks like the 2008 financial crisis and COVID-19.
+                                                                            </p>
+
+                                                                            <div class="project__my-role">
+                                                                                <div class="project__my-role-title"><i class="ri-user-star-line"></i> My Contribution — Question 5: New Build Premium Analysis</div>
+                                                                                <p>
+                                                                                    I led the analysis comparing median sale prices for new builds vs. existing homes across all 32 postcode areas and years (672 combinations). Using Excel for calculations and Tableau for geographic mapping, I found that new builds command a premium in 27 of 32 areas — ranging from +140% in Westminster (W) to −7% in Romford (RM). Prime Central London postcodes (W, SW, WC) dominated the top 3, revealing that the new build premium is highly location-dependent, not universal.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!-- Right column: Key Findings + Links -->
+                                                                        <div>
+                                                                            <div class="project__key-findings">
+                                                                                <div class="project__key-findings-title">Key Team Findings</div>
+                                                                                <ul class="project__highlights">
+                                                                                    <li>Flats showed the lowest median price change overall — likely due to shorter holding periods</li>
+                                                                                    <li>Postcode areas W, SW, EC, and NW consistently had the highest median property costs across the decade</li>
+                                                                                    <li>Short-term resales (≤2 yrs) represent only 16.2% of repeat sales; the market is structurally long-term</li>
+                                                                                    <li>Median lifetime return was +121.3% over a ~19.5-year holding period</li>
+                                                                                    <li>RM had the most dramatic 2008 dip with strong recovery — a pattern it repeated in 2020</li>
+                                                                                    <li>New builds command premiums in 27 of 32 areas; Central London drives the highest</li>
+                                                                                </ul>
+                                                                            </div>
+
+                                                                            <div class="project__resource-links">
+                                                                                <a href="https://public.tableau.com/views/5UKNewBuildPremiumMap/UKPostcodePremium?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer" class="project__resource-link project__resource-link--primary">
+                                                                                    <i class="ri-bar-chart-box-fill"></i> Tableau Viz
+                                                                                </a>
+                                                                                <a href="https://docs.google.com/presentation/d/1jfZeHkWYJsJLANgEXz2E5ZRonaJbQjtpRyqhEz7yskk/edit?slide=id.gc6f980f91_0_0#slide=id.gc6f980f91_0_0" target="_blank" rel="noopener noreferrer" class="project__resource-link">
+                                                                                    <i class="ri-slideshow-3-line"></i> Presentation
+                                                                                </a>
+                                                                                <a href="https://averysmith.notion.site/1Q26-DAA-Internship-UK-Property-Sales-2804e45f1e4e80778311d097252a9423" target="_blank" rel="noopener noreferrer" class="project__resource-link">
+                                                                                    <i class="ri-file-text-line"></i> Project Brief
+                                                                                </a>
+                                                                                <a href="https://www.kaggle.com/datasets/isaacoresanya/uk-property-prices-with-sale-history" target="_blank" rel="noopener noreferrer" class="project__resource-link">
+                                                                                    <i class="ri-database-2-line"></i> Dataset
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </article>
                                             
                                                                 <!-- Project 6 - Coming Soon -->
