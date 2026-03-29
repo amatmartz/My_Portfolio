@@ -1,218 +1,902 @@
-AM Alejandro Mateo, MBA
-	•	Home
-	•	About Me
-	•	Skills
-	•	Projects
-	•	Experience
-	•	Resume
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLECHTT6XH"></script>
+                <script>
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
 
-Contact Me
+                                gtag('config', 'G-KLECHTT6XH');
+                </script>
+            <meta charset="UTF-8">
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231a1a1a'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='40' font-weight='bold' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Bilingual Data & Business Intelligence Analyst Leveraging 20+ years of expertise to find the narrative hidden in the numbers. I don't just analyze data—I translate it into growth.
+            <title>Alejandro Mateo | Data & Business Analyst</title>
+        <meta name="description" content="Portfolio of Alejandro Mateo &mdash; Bilingual Data & Business Intelligence Analyst, Leveraging 20+ years of expertise to find the narrative hidden in the numbers. I don't just analyze data — I translate it into growth.">
+    
+        <!-- Boxicons -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+        <!-- Remix Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-Scroll Down
+        <!-- Featured Project Styles -->
+        <style>
+            .project__card--featured {
+                grid-column: 1 / -1;
+                border-left: 4px solid #e97627;
+                background: linear-gradient(135deg, var(--container-color) 0%, #f8f6f3 100%);
+                position: relative;
+                overflow: hidden;
+            }
+            .project__card--featured::before {
+                content: '';
+                position: absolute;
+                top: 0; right: 0;
+                width: 120px; height: 120px;
+                background: radial-gradient(circle at top right, rgba(233,118,39,.08) 0%, transparent 70%);
+                pointer-events: none;
+            }
+            .project__featured-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            @media (max-width: 768px) {
+                .project__featured-layout {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .project__featured-label {
+                display: inline-flex;
+                align-items: center;
+                gap: .35rem;
+                font-size: .7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: #e97627;
+                margin-bottom: .75rem;
+            }
+            .project__featured-label i {
+                font-size: .85rem;
+            }
+            .project__overview {
+                font-size: var(--small-font-size);
+                color: var(--text-color);
+                line-height: 1.7;
+                margin-bottom: 1rem;
+            }
+            .project__my-role {
+                background: rgba(233,118,39,.06);
+                border-radius: 8px;
+                padding: 1rem 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+            .project__my-role-title {
+                font-size: var(--small-font-size);
+                font-weight: var(--font-bold);
+                color: var(--title-color);
+                margin-bottom: .5rem;
+            }
+            .project__my-role p {
+                font-size: var(--smaller-font-size);
+                color: var(--text-color);
+                line-height: 1.65;
+            }
+            .project__key-findings {
+                margin-bottom: 1rem;
+            }
+            .project__key-findings-title {
+                font-size: var(--small-font-size);
+                font-weight: var(--font-bold);
+                color: var(--title-color);
+                margin-bottom: .5rem;
+            }
+            .project__badges-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+                margin-bottom: .5rem;
+            }
+            .project__badge--team {
+                background-color: #2c3e50;
+            }
+            .project__resource-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .6rem;
+                margin-top: 1rem;
+            }
+            .project__resource-link {
+                display: inline-flex;
+                align-items: center;
+                gap: .35rem;
+                color: var(--title-color);
+                font-size: var(--smaller-font-size);
+                font-weight: var(--font-medium);
+                border: 1.5px solid var(--title-color);
+                padding: .35rem .85rem;
+                border-radius: 20px;
+                transition: background-color .3s, color .3s, transform .2s;
+                text-decoration: none;
+            }
+            .project__resource-link:hover {
+                background-color: var(--title-color);
+                color: #fff;
+                transform: translateY(-2px);
+            }
+            .project__resource-link--primary {
+                background-color: var(--title-color);
+                color: #fff;
+                border-color: var(--title-color);
+            }
+            .project__resource-link--primary:hover {
+                background-color: #333;
+                border-color: #333;
+            }
+            .project__viz-preview {
+                display: block;
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 16px rgba(0,0,0,.1);
+                margin-top: .25rem;
+                transition: transform .3s, box-shadow .3s;
+            }
+            .project__viz-preview:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 24px rgba(0,0,0,.15);
+            }
+            .project__viz-preview img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .project__viz-overlay {
+                position: absolute;
+                bottom: 0; left: 0; right: 0;
+                background: linear-gradient(transparent, rgba(0,0,0,.65));
+                color: #fff;
+                padding: .75rem 1rem;
+                font-size: var(--smaller-font-size);
+                font-weight: var(--font-medium);
+                display: flex;
+                align-items: center;
+                gap: .35rem;
+                opacity: 0;
+                transition: opacity .3s;
+            }
+            .project__viz-preview:hover .project__viz-overlay {
+                opacity: 1;
+            }
+            .project__viz-caption {
+                font-size: .7rem;
+                color: var(--text-color-light);
+                margin-top: .4rem;
+                text-align: center;
+            }
+        </style>
+    </head>
 
-￼
+<body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+                    <nav class="nav container">
+                                    <a href="#" class="nav__logo">
+                                                        <span class="nav__logo-circle">AM</span>
+                                                        Alejandro Mateo, MBA
+                                    </a>
 
-About Me
+                                    <div class="nav__menu" id="nav-menu">
+                                                        <ul class="nav__list">
+                                                                                <li class="nav__item">
+                                                                                                            <a href="#home" class="nav__link active-link">Home</a>
+                                                                                    </li>
+                                                                                <li class="nav__item">
+                                                                                                            <a href="#about" class="nav__link">About Me</a>
+                                                                                    </li>
+                                                                                <li class="nav__item">
+                                                                                                            <a href="#skills" class="nav__link">Skills</a>
+                                                                                    </li>
+                                                                                <li class="nav__item">
+                                                                                                            <a href="#projects" class="nav__link">Projects</a>
+                                                                                    </li>
+                                                                                <li class="nav__item">
+                                                                                                            <a href="#experience" class="nav__link">Experience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#resume" class="nav__link">Resume</a>
+                                                                                    </li>
 
-I'm a bilingual (English/Spanish) data and business analyst focused on business intelligence and decision support, with 15+ years of professional experience across the U.S. and Spain. I combine a strong foundation in Business Administration (MBA, e-business specialization) with hands-on work in data analytics, business intelligence, and financial analysis.
-My career started in Spain in a business services environment, where I supported financial reporting, budgeting, and process improvement using ERP systems and Excel. After relocating to the U.S., I transitioned into education, applying the same analytical and leadership skills to track performance, build dashboards, and translate complex data into clear, actionable insights for students, families, and school leadership.
-Today, I'm focused on analytics full-time and currently completing the Data Analytics Accelerator (DAA), a highly hands-on program centered on real-world projects. I work regularly with SQL, Excel, Power BI, Tableau, and Python on real-world datasets to clean data, analyze trends, build dashboards, and answer business questions that support decision-making. I'm actively building a portfolio of data analytics and business intelligence projects.
-What I'm strongest at:
-📊
-Data Analytics & Business Intelligence: SQL, Power BI, Tableau, Excel, data visualization, KPI dashboards
-💼
-Business & Financial Analysis: Budgeting, forecasting, variance analysis, scenario planning
-🔄
-Operations & Process Improvement: Cross-functional collaboration, ERP exposure
-🌍
-Bilingual Communication: Clear, trusted communication in English and Spanish
-Outside of work, I enjoy spending time with my family, staying active, learning new technologies, and continuously improving how I work. I'm naturally curious, structured, and motivated by turning information into insight, and insight into action.
-🎯 I'm currently exploring Data Analyst, Business Intelligence Analyst, and Business Analyst roles where I can combine analytics, business context, and communication skills to drive data-informed decisions.
-👉 If you're working in data, analytics, BI, or finance —or hiring for these roles— I'd be happy to connect, learn from your experience, or explore how I could add value.
-6+ Projects Completed
-4+ Tools Mastered
-Tech Stack
+                        
+                                                        </ul>
 
+                                                        <!-- Close button -->
+                                                        <div class="nav__close" id="nav-close">
+                                                                                <i class="ri-close-line"></i>
+                                                        </div>
+                                    </div>
 
-Excel
-PivotTables, VLOOKUP, INDEX/MATCH, data cleaning, charts
+                                    <div class="nav__buttons">
+                                                        <a href="#contact" class="nav__contact-btn">Contact Me</a>
+                                                        <!-- Toggle button -->
+                                                        <div class="nav__toggle" id="nav-toggle">
+                                                                                <i class="ri-menu-3-line"></i>
+                                                        </div>
+                                    </div>
+                    </nav>
+        </header>
 
-SQL
-MySQL — JOINs, subqueries, CTEs, aggregations
+        <!--==================== MAIN ====================-->
+        <main class="main">
 
-Tableau
-Dashboards, KPIs, data storytelling & visualization
+                    <!--==================== HOME ====================-->
+                    <section class="home section" id="home">
+                                    <div class="home__container container grid">
+                                                        <div class="home__content">
+                                                                                
 
-Power BI
-Interactive dashboards, DAX, data modeling, KPI reports
+                    
 
-Python
-Pandas, basic analytics — currently expanding
+                                                                                <div class="home__description">
+                                                                                                            <span class="home__line"></span>
+                                                                                                            <p>
+                                                                                                                                            <span class="home__highlight">Bilingual Data & Business Intelligence Analyst</span>
+                            Leveraging 20+ years of expertise to find the narrative hidden in the numbers. I don't just analyze data&mdash;I translate it into growth.
+                                                                                                                </p>
+                                                                                    </div>
 
-GitHub
-Version control, portfolio hosting, collaboration
+                                                                                <!-- Scroll Down -->
+                                                                                <div class="home__scroll">
+                                                                                                            <div class="home__scroll-box">
+                                                                                                                                            <i class="ri-arrow-down-s-line"></i>
+                                                                                                                </div>
+                                                                                                            <span class="home__scroll-text">Scroll Down</span>
+                                                                                    </div>
+                                                        </div>
 
-Google Sheets
-Collaboration, data management, automation
+                                                        <div class="home__image-wrapper">
+                                                                                <div class="home__image-frame">
+                                                                                                            <div class="home__image-border"></div>
+                                                                                                            <img src="profile.jpg" alt="Alejandro Mateo - Data & Business Analyst" class="home__image">
+                                                                                    </div>
 
-Data Storytelling
-Communication skills honed from teaching background
-Projects
+                                                                                <svg class="home__arrow" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M70 5C55 15 35 35 15 75" stroke="#333" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                        <path d="M8 60L15 75L25 63" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
 
-Excel Exploratory Data Analysis
-DoorDash Marketing Analytics
-	•	Real-world marketing campaign data analysis
-	•	Utilized VLOOKUPs, PivotTables, Scatter Plots & Bar Charts
-	•	Comprehensive write-up to help the marketing team optimize their next campaign
-View Write-Up
-Tableau Data Visualization
-Massachusetts Education Overview
-	•	Analyzed 1,861 schools and 953,748 students using real MA Department of Education data
-	•	Discovered that economic disadvantage — not class size — drives college attendance gaps
-	•	Only 3 of 100 districts passed the 50% math proficiency threshold
-	•	Delivered recommendations for targeted funding to highest-need communities
-View Dashboard Watch Video Walkthrough
-SQL Tableau Data Storytelling & Financial Analysis
-Haiti IDA Portfolio Analysis — From Debt to Grants
-	•	Analyzed 11,171 World Bank IDA transactions across 131 countries, deep-diving into Haiti’s 120-transaction, $3.3B portfolio
-	•	Discovered Haiti owes $0 to IDA — every project since 2010 is a grant, not a repayable credit
-	•	Traced how a $5M school reconstruction grant became the blueprint for 90 schools and 60,000 students served annually
-	•	Demonstrated all 17 SQL commands (SELECT, JOIN, CTE, CASE WHEN, PARTITION BY, etc.) with MySQL & Tableau
-Read Article View Dashboard
-SQL Exploratory Data Analysis
-Analyzing Hospital Data with SQL
-	•	Analyzed what affects hospital stay length in MySQL
-	•	Real data from over 101,000 hospital patients
-	•	Created a histogram using SQL
-Coming Soon
+                    <!-- Social icons to the right of photo -->
+                                                                                <div class="home__social">
+                                                                                                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="Instagram">
+                                                                                                                                            <i class="ri-instagram-line"></i>
+                                                                                                                </a>
+                                                                                                            <a href="https://www.linkedin.com/in/amateomartz/" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="LinkedIn">
+                                                                                                                                            <i class="ri-linkedin-box-fill"></i>
+                                                                                                                </a>
+                                                                                                            <a href="https://github.com/amatmartz" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="GitHub">
+                                                                                                                                            <i class="ri-github-fill"></i>
+                                                                                                                </a>
+                                                                                                            <a href="https://public.tableau.com/app/profile/alejandro.mateo/vizzes" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="Tableau Public">
+                                                                                                                                            <i class="ri-bar-chart-box-fill"></i>
+                                                                                                                </a>
+                                                                                    </div>
+                                                        </div>
+                                    </div>
+                    </section>
 
-FEATURED TEAM PROJECT — DAA INTERNSHIP
-Excel
-SQL
-Tableau
-Team
-UK Property Sales Trends (1995–2025)
-As part of a 5-person team in the Data Analytics Accelerator internship, we analyzed 51,000+ UK property transactions spanning 30 years across 32 postcode areas. The project explored price trends, property types, tenure comparisons, holding periods, new build premiums, and the impact of economic shocks like the 2008 financial crisis and COVID-19.
-My Contribution — Question 5: New Build Premium Analysis
-I led the analysis comparing median sale prices for new builds vs. existing homes across all 32 postcode areas and years (672 combinations). Using Excel for calculations and Tableau for geographic mapping, I found that new builds command a premium in 27 of 32 areas — ranging from +140% in Westminster (W) to −7% in Romford (RM). Prime Central London postcodes (W, SW, WC) dominated the top 3, revealing that the new build premium is highly location-dependent, not universal.
-￼
+                    <!--==================== ABOUT ====================-->
+                    <section class="about section" id="about">
+                                    <div class="about__container container grid">
+                                                        <div class="about__content">
+                                                                                <h2 class="section__title">About Me</h2>
+                                                                                <div class="section__subtitle-line"></div>
 
-Open Interactive Dashboard
-UK Postcode Premium Map — click to explore interactive version
-Key Team Findings
-	•	Flats showed the lowest median price change overall — likely due to shorter holding periods
-	•	Postcode areas W, SW, EC, and NW consistently had the highest median property costs across the decade
-	•	Short-term resales (≤2 yrs) represent only 16.2% of repeat sales; the market is structurally long-term
-	•	Median lifetime return was +121.3% over a ~19.5-year holding period
-	•	RM had the most dramatic 2008 dip with strong recovery — a pattern it repeated in 2020
-	•	New builds command premiums in 27 of 32 areas; Central London drives the highest
+                                                                                <p class="about__description">
+                                                                                                            I'm a bilingual (English/Spanish) data and business analyst focused on business intelligence and decision support, with 15+ years of professional experience across the U.S. and Spain. I combine a strong foundation in Business Administration (MBA, e-business specialization) with hands-on work in data analytics, business intelligence, and financial analysis.
+                                                                                    </p>
 
-Tableau Viz
+                                                                                <p class="about__description">
+                                                                                                            My career started in Spain in a business services environment, where I supported financial reporting, budgeting, and process improvement using ERP systems and Excel. After relocating to the U.S., I transitioned into education, applying the same analytical and leadership skills to track performance, build dashboards, and translate complex data into clear, actionable insights for students, families, and school leadership.
+                                                                                    </p>
 
-Presentation
+                                                                                <p class="about__description">
+                                                                                                            Today, I'm focused on analytics full-time and currently completing the Data Analytics Accelerator (DAA), a highly hands-on program centered on real-world projects. I work regularly with SQL, Excel, Power BI, Tableau, and Python on real-world datasets to clean data, analyze trends, build dashboards, and answer business questions that support decision-making. I'm actively building a portfolio of data analytics and business intelligence projects.
+                                                                                    </p>
 
-Project Brief
+                                                                                <div class="about__strengths">
+                                                                                                            <h3 class="about__strengths-title">What I'm strongest at:</h3>
+                                                                                                            <div class="about__strengths-grid">
+                                                                                                                                            <div class="about__strength-item">
+                                                                                                                                                                                <span class="about__strength-icon">&#x1F4CA;</span>
+                                                                                                                                                                                <div>
+                                                                                                                                                                                                                        <strong>Data Analytics & Business Intelligence:</strong> SQL, Power BI, Tableau, Excel, data visualization, KPI dashboards
+                                                                                                                                                                                                                </div>
+                                                                                                                                                </div>
+                                                                                                                                        <div class="about__strength-item">
+                                                                                                                                                                        <span class="about__strength-icon">&#x1F4BC;</span>
+                                                                                                                                                                        <div>
+                                                                                                                                                                                                            <strong>Business & Financial Analysis:</strong> Budgeting, forecasting, variance analysis, scenario planning
+                                                                                                                                                                                                        </div>
+                                                                                                                                            </div>
+                                                                                                                                        <div class="about__strength-item">
+                                                                                                                                                                        <span class="about__strength-icon">&#x1F504;</span>
+                                                                                                                                                                        <div>
+                                                                                                                                                                                                            <strong>Operations & Process Improvement:</strong> Cross-functional collaboration, ERP exposure
+                                                                                                                                                                                                        </div>
+                                                                                                                                            </div>
+                                                                                                                                        <div class="about__strength-item">
+                                                                                                                                                                        <span class="about__strength-icon">&#x1F30D;</span>
+                                                                                                                                                                        <div>
+                                                                                                                                                                                                            <strong>Bilingual Communication:</strong> Clear, trusted communication in English and Spanish
+                                                                                                                                                                                                        </div>
+                                                                                                                                            </div>
+                                                                                                                </div>
+                                                                                    </div>
+                                                        
+                                                                            <p class="about__description">
+                                                                                Outside of work, I enjoy spending time with my family, staying active, learning new technologies, and continuously improving how I work. I'm naturally curious, structured, and motivated by turning information into insight, and insight into action.
+                                                                            </p>
+                                                        
+                                                                            <p class="about__description about__cta-text">
+                                                                                &#x1F3AF; I'm currently exploring Data Analyst, Business Intelligence Analyst, and Business Analyst roles where I can combine analytics, business context, and communication skills to drive data-informed decisions.
+                                                                            </p>
+                                                        
+                                                                            <p class="about__description about__connect-text">
+                                                                                &#x1F449; If you're working in data, analytics, BI, or finance &mdash;or hiring for these roles&mdash; I'd be happy to connect, learn from your experience, or explore how I could add value.
+                                                                            </p>
+                                                        
+                                                                            <div class="about__stats">
+                                                                                                    <div class="about__stat">
+                                                                                                                                <span class="about__stat-number">6+</span>
+                                                                                                                                <span class="about__stat-label">Projects Completed</span>
+                                                                                                        </div>
+                                                                                                    <div class="about__stat">
+                                                                                                                                <span class="about__stat-number">4+</span>
+                                                                                                                                <span class="about__stat-label">Tools Mastered</span>
+                                                                                                        </div>
+                                                                                                    
+                                                                            </div>
+                                                        </div>
+                                    </div>
+                    </section>
+        
+                <!--==================== SKILLS ====================-->
+                <section class="skills section" id="skills">
+                            <div class="skills__container container">
+                                            <h2 class="section__title">Tech Stack</h2>
+                                            <div class="section__subtitle-line"></div>
+                            
+                                            <div class="skills__grid">
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-file-excel-2-line"></i>
+                                                                                            </div>
+                                                                                        <h3 class="skill__name">Excel</h3>
+                                                                                        <p class="skill__detail">PivotTables, VLOOKUP, INDEX/MATCH, data cleaning, charts</p>
+                                                                </div>
+                                            
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-database-2-line"></i>
+                                                                                            </div>
+                                                                                        <h3 class="skill__name">SQL</h3>
+                                                                                        <p class="skill__detail">MySQL &mdash; JOINs, subqueries, CTEs, aggregations</p>
+                                                                </div>
+                                            
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-bar-chart-box-line"></i>
+                                                                                            </div>
+                                                                                        <h3 class="skill__name">Tableau</h3>
+                                                                                        <p class="skill__detail">Dashboards, KPIs, data storytelling & visualization</p>
+                                                                </div>
 
-Dataset
-TBD Full Analytics Pipeline
-Capstone Project
-	•	Choose-your-own-topic capstone project
-	•	Final portfolio project for DAA bootcamp
-	•	Currently in progress...
-Coming Soon
-Experience
+                        <div class="skill__card" data-aos="fade-up">
+                            <div class="skill__icon">
+                                <i class="ri-bar-chart-grouped-line"></i>
+                            </div>
+                            <h3 class="skill__name">Power BI</h3>
+                            <p class="skill__detail">Interactive dashboards, DAX, data modeling, KPI reports</p>
+                        </div>
+                                            
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-code-s-slash-line"></i>
+                                                                                            </div>
 
+                                                                                        <h3 class="skill__name">Python</h3>
+                                                                                        <p class="skill__detail">Pandas, basic analytics &mdash; currently expanding</p>
+                                                                </div>
+                                            
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-github-fill"></i>
+                                                                                            </div>
+                                                                                        <h3 class="skill__name">GitHub</h3>
+                                                                                        <p class="skill__detail">Version control, portfolio hosting, collaboration</p>
+                                                                </div>
+                                            
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-google-fill"></i>
+                                                                                            </div>
+                                                                                        <h3 class="skill__name">Google Sheets</h3>
+                                                                                        <p class="skill__detail">Collaboration, data management, automation</p>
+                                                                </div>
+                                            
+                                                                <div class="skill__card" data-aos="fade-up">
+                                                                                        <div class="skill__icon">
+                                                                                                                    <i class="ri-presentation-line"></i>
+                                                                                            </div>
+                                                                                        <h3 class="skill__name">Data Storytelling</h3>
+                                                                                        <p class="skill__detail">Communication skills honed from teaching background</p>
+                                                                </div>
+                                            </div>
+                            </div>
+                </section>
+        
+                <!--==================== PROJECTS ====================-->
+                <section class="projects section" id="projects">
+                            <div class="projects__container container">
+                                            <h2 class="section__title">Projects</h2>
+                                            <div class="section__subtitle-line"></div>
+                            
+                                            <div class="projects__grid">
+                                                                <!-- Project 1 -->
+                                                                <article class="project__card">
+                                                                                        <div class="project__header">
+                                                                                                                    <span class="project__badge project__badge--excel">Excel</span>
+                                                                                                                    <span class="project__type">Exploratory Data Analysis</span>
+                                                                                            </div>
+                                                                                        <h3 class="project__title">DoorDash Marketing Analytics</h3>
+                                                                                        <ul class="project__highlights">
+                                                                                                                    <li>Real-world marketing campaign data analysis</li>
+                                                                                                                    <li>Utilized VLOOKUPs, PivotTables, Scatter Plots & Bar Charts</li>
+                                                                                                                    <li>Comprehensive write-up to help the marketing team optimize their next campaign</li>
+                                                                                            </ul>
+                                                                                        <div class="project__links">
+                                                                                                                    <a href="https://www.linkedin.com/pulse/campaign-changed-everything-alejandro-mateo-mba-amwec/?trackingId=6eKXpa6wURhjH%2FUuOUPyIw%3D%3D" target="_blank" rel="noopener noreferrer" class="project__link">
+                                                                                                                                                    <i class="ri-external-link-line"></i> View Write-Up
+                                                                                                                        </a>
+                                                                                            </div>
+                                                                </article>
+                                            
+                                                                <!-- Project 2 -->
+<article class="project__card">
+    <div class="project__header">
+        <span class="project__badge project__badge--tableau">Tableau</span>
+        <span class="project__type">Data Visualization</span>
+    </div>
+    <h3 class="project__title">Massachusetts Education Overview</h3>
+    <ul class="project__highlights">
+        <li>Analyzed 1,861 schools and 953,748 students using real MA Department of Education data</li>
+        <li>Discovered that economic disadvantage — not class size — drives college attendance gaps</li>
+        <li>Only 3 of 100 districts passed the 50% math proficiency threshold</li>
+        <li>Delivered recommendations for targeted funding to highest-need communities</li>
+    </ul>
+    <div class="project__links">
+        <a href="https://public.tableau.com/app/profile/alejandro.mateo/viz/MAHighSchools/Dashboard1" target="_blank" rel="noopener noreferrer" class="project__link">
+            <i class="ri-external-link-line"></i> View Dashboard
+        </a>
+        <a href="https://www.loom.com/share/8540ba1b4fef450eaa8883ffd5cdcc52" target="_blank" rel="noopener noreferrer" class="project__link">
+            <i class="ri-video-line"></i> Watch Video Walkthrough
+        </a>
+    </div>
+</article>
+                                            
+                                                                <!-- Project 3 -->
+                                                                <article class="project__card">
+                                                                                        <div class="project__header">
+                                                                                                                    <span class="project__badge project__badge--sql">SQL</span>
+                                                                                                                    <span class="project__badge project__badge--tableau">Tableau</span>
+                                                                                                                    <span class="project__type">Data Storytelling &amp; Financial Analysis</span>
+                                                                                            </div>
+                                                                                        <h3 class="project__title">Haiti IDA Portfolio Analysis &mdash; From Debt to Grants</h3>
+                                                                                        <ul class="project__highlights">
+                                                                                                                    <li>Analyzed 11,171 World Bank IDA transactions across 131 countries, deep-diving into Haiti&rsquo;s 120-transaction, $3.3B portfolio</li>
+                                                                                                                    <li>Discovered Haiti owes $0 to IDA &mdash; every project since 2010 is a grant, not a repayable credit</li>
+                                                                                                                    <li>Traced how a $5M school reconstruction grant became the blueprint for 90 schools and 60,000 students served annually</li>
+                                                                                                                    <li>Demonstrated all 17 SQL commands (SELECT, JOIN, CTE, CASE WHEN, PARTITION BY, etc.) with MySQL &amp; Tableau</li>
+                                                                                            </ul>
+                                                                                        <div class="project__links">
+                                                                                                                    <a href="https://www.linkedin.com/pulse/from-debt-grants-what-haitis-world-bank-data-reveals-owes-mateo-mba-usp1c/" target="_blank" rel="noopener noreferrer" class="project__link">
+                                                                                                                                                    <i class="ri-article-line"></i> Read Article
+                                                                                                                        </a>
+                                                                                                                    <a href="https://public.tableau.com/views/HaitiFinancialProject/HaitisIDAPortfolioAnalysis?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener noreferrer" class="project__link">
+                                                                                                                                                    <i class="ri-bar-chart-box-line"></i> View Dashboard
+                                                                                                                        </a>
+                                                                                            </div>
+                                                                </article>
+                                            
+                                                                <!-- Project 4 -->
+                                                                <article class="project__card project__card--coming-soon">
+                                                                                        <div class="project__header">
+                                                                                                                    <span class="project__badge project__badge--sql">SQL</span>
+                                                                                                                    <span class="project__type">Exploratory Data Analysis</span>
+                                                                                            </div>
+                                                                                        <h3 class="project__title">Analyzing Hospital Data with SQL</h3>
+                                                                                        <ul class="project__highlights">
+                                                                                                                    <li>Analyzed what affects hospital stay length in MySQL</li>
+                                                                                                                    <li>Real data from over 101,000 hospital patients</li>
+                                                                                                                    <li>Created a histogram using SQL</li>
+                                                                                            </ul>
+                                                                                        <div class="project__coming-soon-badge">
+                            <i class="ri-time-line"></i> Coming Soon
+                        </div>
+                                                                </article>
+                                            
+                                                                <!-- Project 5 — Featured Team Internship -->
+                                                                <article class="project__card project__card--featured">
+                                                                    <div class="project__featured-label">
+                                                                        <i class="ri-star-fill"></i> Featured Team Project — DAA Internship
+                                                                    </div>
+                                                                    <div class="project__header">
+                                                                        <div class="project__badges-row">
+                                                                            <span class="project__badge project__badge--excel">Excel</span>
+                                                                            <span class="project__badge project__badge--sql">SQL</span>
+                                                                            <span class="project__badge project__badge--tableau">Tableau</span>
+                                                                            <span class="project__badge project__badge--team">Team</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h3 class="project__title">UK Property Sales Trends (1995–2025)</h3>
 
-Current
-DAA Bootcamp Student
-Data Career Jumpstart
-10-week, 100% project-based Data Analytics Accelerator program. Building real-world projects using Excel, SQL, Tableau, and Python.
+                                                                    <div class="project__featured-layout">
+                                                                        <!-- Left column: Overview + My Role -->
+                                                                        <div>
+                                                                            <p class="project__overview">
+                                                                                As part of a 5-person team in the Data Analytics Accelerator internship, we analyzed 51,000+ UK property transactions spanning 30 years across 32 postcode areas. The project explored price trends, property types, tenure comparisons, holding periods, new build premiums, and the impact of economic shocks like the 2008 financial crisis and COVID-19.
+                                                                            </p>
 
-Current
-DAA Internship Team Member
-Data Analytics Accelerator
-Part of a 5-person team analyzing UK property data. Collaborative data analysis and report generation.
+                                                                            <div class="project__my-role">
+                                                                                <div class="project__my-role-title"><i class="ri-user-star-line"></i> My Contribution — Question 5: New Build Premium Analysis</div>
+                                                                                <p>
+                                                                                    I led the analysis comparing median sale prices for new builds vs. existing homes across all 32 postcode areas and years (672 combinations). Using Excel for calculations and Tableau for geographic mapping, I found that new builds command a premium in 27 of 32 areas — ranging from +140% in Westminster (W) to −7% in Romford (RM). Prime Central London postcodes (W, SW, WC) dominated the top 3, revealing that the new build premium is highly location-dependent, not universal.
+                                                                                </p>
+                                                                            </div>
 
-Most Recent
-Spanish Teacher
-Evanston Township High School
-Taught Spanish language and culture. Developed curriculum, assessed student progress, and honed communication and data-driven teaching skills.
-View Full Profile on LinkedIn
-Resume
+                                                                            <a href="https://public.tableau.com/views/5UKNewBuildPremiumMap/UKPostcodePremium?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer" class="project__viz-preview">
+                                                                                <img src="https://public.tableau.com/static/images/5U/5UKNewBuildPremiumMap/UKPostcodePremium/1.png" alt="UK New Build Premium Map — Tableau visualization showing premium percentages by postcode area across England" loading="lazy">
+                                                                                <div class="project__viz-overlay">
+                                                                                    <i class="ri-external-link-line"></i> Open Interactive Dashboard
+                                                                                </div>
+                                                                            </a>
+                                                                            <p class="project__viz-caption">UK Postcode Premium Map — click to explore interactive version</p>
+                                                                        </div>
 
-ALEJANDRO MATEO
-amateomartz@gmail.com 630.253.6172 Evanston, IL
-linkedin.com/in/amateomartz Portfolio
-OBJECTIVE
-Bilingual (English/Spanish) business professional with an MBA, 15 years of experience in the U.S., and 4 years of corporate administration and technology experience in Spain. Skilled in financial reporting, reconciliations, forecasting, advanced Excel, ERP systems, and data analysis. Strong record of improving processes, building dashboards, and supporting decision-making through data. Seeking to apply financial and analytical expertise to contribute to organizational efficiency and growth.
-TECHNICAL SKILLS
-Excel: PivotTables, VLOOKUP, INDEX-MATCH, SUMIFS, conditional formatting, macros, data modeling
-ERP Systems: SAP, ERP, SAP BPC
-Visualization Tools: Power BI, Tableau
-Database & Programming: SQL, R
-Web & Analytics: Google Analytics
-Collaboration Tools: Google Workspace, Microsoft Office Suite, LMS platforms
-EDUCATION
-Master's Degree in Business Administration and Management, concentration in e-business
-December 2008
-Pablo de Olavide, Seville, Spain
-Bachelor of Business Administration
-June 2004
-Pablo de Olavide, Seville, Spain
-Relevant coursework: Financial Accounting, Financial Mathematics, Financial Management, Statistics, Economics, Strategic Management, and IT for Business
-Master of Arts in Teaching
-April 2017
-Foster G. McGaw Graduate School, National Louis University, Chicago, Illinois
-Illinois Certification Program in Foreign Language (Type 10 Spanish)
-Endorsements: Foreign Language in Spanish (K-12), Business, Marketing and Computer Education (9-12)
-EXPERIENCE
-Administrative & Technology Specialist
-Jan 2004 – Jun 2008
-Otema Servicios Empresariales – Seville, Spain
-	•	Prepared financial reports and monitored client account performance using ERP systems and advanced Excel
-	•	Managed financial records, invoicing, and accounts receivable/payable
-	•	Developed database management solutions that streamlined client record-keeping
-	•	Achieved a 15% reduction in administrative turnaround time through automation and workflow redesign
-	•	Supported budgeting and forecasting activities by providing data analysis to senior managers
-	•	Trained staff on ERP modules, Excel templates, and reporting tools
-OTHER EXPERIENCE
-Spanish Teacher
-Aug 2023 – Jun 2025
-Evanston Township High School, Evanston, IL
-	•	Managed curriculum and resources for 120+ students annually, applying data analysis to improve performance outcomes
-	•	Designed technology-based solutions for tracking progress, mirroring financial reporting and KPI dashboards
-	•	Led cross-functional collaboration with administrators, counselors, and IT
-	•	Created and delivered presentations to diverse stakeholders
-Spanish Teacher
-Aug 2017 – Aug 2023
-Carmel Catholic High School, Mundelein, IL
-	•	Designed and implemented end-to-end projects, applying financial-style planning and efficiency analysis
-	•	Collected and analyzed student data to identify performance gaps and improve efficiency
-	•	Trained colleagues on data tools and software for improved productivity
-Spanish/ELL Teacher
-Aug 2016 – Jun 2017
-Glenview School District 34, Glenview, IL
-	•	Implemented performance tracking dashboards in Google Sheets and LMS platforms
-	•	Assessed student learning through Evidence-Based Reporting
-Spanish Teacher
-Aug 2014 – Jun 2016
-North Chicago Community High School, North Chicago, IL
-	•	Developed a multi-level curriculum integrating quantitative progress monitoring and resource management
-Additional Roles
-Aug 2010 – Jun 2014
-Student Teacher, Substitute Teacher, Program Assistant — built foundational project coordination, communication, and organizational skills applicable to finance and corporate settings.
-CORE SKILLS
-Languages: Spanish & English
-Financial Reporting, Forecasting & Variance Analysis, Data Analysis, Budgeting & Scenario Planning, KPI Dashboard Development & Data Visualization
-Business Process Improvement & Project Management
-Training, Stakeholder Engagement & Cross-Functional Collaboration
-Strong Presentation & Communication Skills
-Let's Connect
+                                                                        <!-- Right column: Key Findings + Links -->
+                                                                        <div>
+                                                                            <div class="project__key-findings">
+                                                                                <div class="project__key-findings-title">Key Team Findings</div>
+                                                                                <ul class="project__highlights">
+                                                                                    <li>Flats showed the lowest median price change overall — likely due to shorter holding periods</li>
+                                                                                    <li>Postcode areas W, SW, EC, and NW consistently had the highest median property costs across the decade</li>
+                                                                                    <li>Short-term resales (≤2 yrs) represent only 16.2% of repeat sales; the market is structurally long-term</li>
+                                                                                    <li>Median lifetime return was +121.3% over a ~19.5-year holding period</li>
+                                                                                    <li>RM had the most dramatic 2008 dip with strong recovery — a pattern it repeated in 2020</li>
+                                                                                    <li>New builds command premiums in 27 of 32 areas; Central London drives the highest</li>
+                                                                                </ul>
+                                                                            </div>
 
-I'm actively seeking Data Analyst, BI, and Financial Analyst opportunities. If you'd like to discuss how my unique blend of teaching experience and data skills can add value to your team, I'd love to hear from you.
-Email
-amateomartz@gmail.com
-LinkedIn GitHub Tableau
-© 2026 Alejandro Mateo. All rights reserved.
+                                                                            <div class="project__resource-links">
+                                                                                <a href="https://public.tableau.com/views/5UKNewBuildPremiumMap/UKPostcodePremium?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer" class="project__resource-link project__resource-link--primary">
+                                                                                    <i class="ri-bar-chart-box-fill"></i> Tableau Viz
+                                                                                </a>
+                                                                                <a href="https://docs.google.com/presentation/d/1jfZeHkWYJsJLANgEXz2E5ZRonaJbQjtpRyqhEz7yskk/edit?slide=id.gc6f980f91_0_0#slide=id.gc6f980f91_0_0" target="_blank" rel="noopener noreferrer" class="project__resource-link">
+                                                                                    <i class="ri-slideshow-3-line"></i> Presentation
+                                                                                </a>
+                                                                                <a href="https://averysmith.notion.site/1Q26-DAA-Internship-UK-Property-Sales-2804e45f1e4e80778311d097252a9423" target="_blank" rel="noopener noreferrer" class="project__resource-link">
+                                                                                    <i class="ri-file-text-line"></i> Project Brief
+                                                                                </a>
+                                                                                <a href="https://www.kaggle.com/datasets/isaacoresanya/uk-property-prices-with-sale-history" target="_blank" rel="noopener noreferrer" class="project__resource-link">
+                                                                                    <i class="ri-database-2-line"></i> Dataset
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </article>
+                                            
+                                                                <!-- Project 6 - Coming Soon -->
+                                                                <article class="project__card project__card--coming-soon">
+                                                                                        <div class="project__header">
+                                                                                                                    <span class="project__badge project__badge--tbd">TBD</span>
+                                                                                                                    <span class="project__type">Full Analytics Pipeline</span>
+                                                                                            </div>
+                                                                                        <h3 class="project__title">Capstone Project</h3>
+                                                                                        <ul class="project__highlights">
+                                                                                                                    <li>Choose-your-own-topic capstone project</li>
+                                                                                                                    <li>Final portfolio project for DAA bootcamp</li>
+                                                                                                                    <li>Currently in progress...</li>
+                                                                                            </ul>
+                                                                                        <div class="project__coming-soon-badge">
+                                                                                                                    <i class="ri-time-line"></i> Coming Soon
+                                                                                            </div>
+                                                                </article>
+                                            </div>
+                            </div>
+                </section>
+        
+                <!--==================== EXPERIENCE ====================-->
+                <section class="experience section" id="experience">
+                            <div class="experience__container container">
+                                            <h2 class="section__title">Experience</h2>
+                                            <div class="section__subtitle-line"></div>
+                            
+                                            <div class="experience__timeline">
+                                                                <div class="experience__item">
+                                                                                        <div class="experience__dot"></div>
+                                                                                        <div class="experience__content">
+                                                                                                                    <span class="experience__date">Current</span>
+                                                                                                                    <h3 class="experience__title">DAA Bootcamp Student</h3>
+                                                                                                                    <p class="experience__company">Data Career Jumpstart</p>
+                                                                                                                    <p class="experience__desc">10-week, 100% project-based Data Analytics Accelerator program. Building real-world projects using Excel, SQL, Tableau, and Python.</p>
+                                                                                            </div>
+                                                                </div>
+                                            
+                                                                <div class="experience__item">
+                                                                                        <div class="experience__dot"></div>
+                                                                                        <div class="experience__content">
+                                                                                                                    <span class="experience__date">Current</span>
+                                                                                                                    <h3 class="experience__title">DAA Internship Team Member</h3>
+                                                                                                                    <p class="experience__company">Data Analytics Accelerator</p>
+                                                                                                                    <p class="experience__desc">Part of a 5-person team analyzing UK property data. Collaborative data analysis and report generation.</p>
+                                                                                            </div>
+                                                                </div>
+                                            
+                                                                <div class="experience__item">
+                                                                                        <div class="experience__dot"></div>
+                                                                                        <div class="experience__content">
+                                                                                                                    <span class="experience__date">Most Recent</span>
+                                                                                                                    <h3 class="experience__title">Spanish Teacher</h3>
+                                                                                                                    <p class="experience__company">Evanston Township High School</p>
+                                                                                                                    <p class="experience__desc">Taught Spanish language and culture. Developed curriculum, assessed student progress, and honed communication and data-driven teaching skills.</p>
+                                                                                            </div>
+                                                                </div>
+                                            </div>
+                            
+                                            <div class="experience__cta">
+                                                                <a href="https://www.linkedin.com/in/amateomartz/" target="_blank" rel="noopener noreferrer" class="experience__link">
+                                                                                        <i class="ri-linkedin-box-fill"></i> View Full Profile on LinkedIn
+                                                                </a>
+                                            </div>
+                            </div>
+                </section>
+        
+                <!--==================== RESUME ====================-->
+        <section class="resume section" id="resume">
+            <div class="resume__container container">
+                <h2 class="section__title">Resume</h2>
+                <div class="section__subtitle-line"></div>
+
+                <div class="resume__content">
+                    <div class="resume__header">
+                        <h3 class="resume__name">ALEJANDRO MATEO</h3>
+                        <div class="resume__contact-info">
+                            <span><i class="ri-mail-line"></i> amateomartz@gmail.com</span>
+                            <span><i class="ri-phone-line"></i> 630.253.6172</span>
+                            <span><i class="ri-map-pin-line"></i> Evanston, IL</span>
+                        </div>
+                        <div class="resume__contact-info">
+                            <a href="https://www.linkedin.com/in/amateomartz/" target="_blank">linkedin.com/in/amateomartz</a>
+                            <a href="https://amatmartz.github.io/My_Portfolio/" target="_blank">Portfolio</a>
+                        </div>
+                    </div>
+
+                    <div class="resume__section">
+                        <h4 class="resume__section-title">OBJECTIVE</h4>
+                        <p class="resume__text">Bilingual (English/Spanish) business professional with an MBA, 15 years of experience in the U.S., and 4 years of corporate administration and technology experience in Spain. Skilled in financial reporting, reconciliations, forecasting, advanced Excel, ERP systems, and data analysis. Strong record of improving processes, building dashboards, and supporting decision-making through data. Seeking to apply financial and analytical expertise to contribute to organizational efficiency and growth.</p>
+                    </div>
+
+                    <div class="resume__section">
+                        <h4 class="resume__section-title">TECHNICAL SKILLS</h4>
+                        <div class="resume__skills-list">
+                            <p><strong>Excel:</strong> PivotTables, VLOOKUP, INDEX-MATCH, SUMIFS, conditional formatting, macros, data modeling</p>
+                            <p><strong>ERP Systems:</strong> SAP, ERP, SAP BPC</p>
+                            <p><strong>Visualization Tools:</strong> Power BI, Tableau</p>
+                            <p><strong>Database &amp; Programming:</strong> SQL, R</p>
+                            <p><strong>Web &amp; Analytics:</strong> Google Analytics</p>
+                            <p><strong>Collaboration Tools:</strong> Google Workspace, Microsoft Office Suite, LMS platforms</p>
+                        </div>
+                    </div>
+
+                    <div class="resume__section">
+                        <h4 class="resume__section-title">EDUCATION</h4>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Master's Degree in Business Administration and Management, concentration in e-business</h5>
+                                <span class="resume__date">December 2008</span>
+                            </div>
+                            <p class="resume__institution">Pablo de Olavide, Seville, Spain</p>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Bachelor of Business Administration</h5>
+                                <span class="resume__date">June 2004</span>
+                            </div>
+                            <p class="resume__institution">Pablo de Olavide, Seville, Spain</p>
+                            <p class="resume__detail">Relevant coursework: Financial Accounting, Financial Mathematics, Financial Management, Statistics, Economics, Strategic Management, and IT for Business</p>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Master of Arts in Teaching</h5>
+                                <span class="resume__date">April 2017</span>
+                            </div>
+                            <p class="resume__institution">Foster G. McGaw Graduate School, National Louis University, Chicago, Illinois</p>
+                            <p class="resume__detail">Illinois Certification Program in Foreign Language (Type 10 Spanish)</p>
+                            <p class="resume__detail">Endorsements: Foreign Language in Spanish (K-12), Business, Marketing and Computer Education (9-12)</p>
+                        </div>
+                    </div>
+
+                    <div class="resume__section">
+                        <h4 class="resume__section-title">EXPERIENCE</h4>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Administrative &amp; Technology Specialist</h5>
+                                <span class="resume__date">Jan 2004 &ndash; Jun 2008</span>
+                            </div>
+                            <p class="resume__institution">Otema Servicios Empresariales &ndash; Seville, Spain</p>
+                            <ul class="resume__bullets">
+                                <li>Prepared financial reports and monitored client account performance using ERP systems and advanced Excel</li>
+                                <li>Managed financial records, invoicing, and accounts receivable/payable</li>
+                                <li>Developed database management solutions that streamlined client record-keeping</li>
+                                <li>Achieved a 15% reduction in administrative turnaround time through automation and workflow redesign</li>
+                                <li>Supported budgeting and forecasting activities by providing data analysis to senior managers</li>
+                                <li>Trained staff on ERP modules, Excel templates, and reporting tools</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="resume__section">
+                        <h4 class="resume__section-title">OTHER EXPERIENCE</h4>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Spanish Teacher</h5>
+                                <span class="resume__date">Aug 2023 &ndash; Jun 2025</span>
+                            </div>
+                            <p class="resume__institution">Evanston Township High School, Evanston, IL</p>
+                            <ul class="resume__bullets">
+                                <li>Managed curriculum and resources for 120+ students annually, applying data analysis to improve performance outcomes</li>
+                                <li>Designed technology-based solutions for tracking progress, mirroring financial reporting and KPI dashboards</li>
+                                <li>Led cross-functional collaboration with administrators, counselors, and IT</li>
+                                <li>Created and delivered presentations to diverse stakeholders</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Spanish Teacher</h5>
+                                <span class="resume__date">Aug 2017 &ndash; Aug 2023</span>
+                            </div>
+                            <p class="resume__institution">Carmel Catholic High School, Mundelein, IL</p>
+                            <ul class="resume__bullets">
+                                <li>Designed and implemented end-to-end projects, applying financial-style planning and efficiency analysis</li>
+                                <li>Collected and analyzed student data to identify performance gaps and improve efficiency</li>
+                                <li>Trained colleagues on data tools and software for improved productivity</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Spanish/ELL Teacher</h5>
+                                <span class="resume__date">Aug 2016 &ndash; Jun 2017</span>
+                            </div>
+                            <p class="resume__institution">Glenview School District 34, Glenview, IL</p>
+                            <ul class="resume__bullets">
+                                <li>Implemented performance tracking dashboards in Google Sheets and LMS platforms</li>
+                                <li>Assessed student learning through Evidence-Based Reporting</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Spanish Teacher</h5>
+                                <span class="resume__date">Aug 2014 &ndash; Jun 2016</span>
+                            </div>
+                            <p class="resume__institution">North Chicago Community High School, North Chicago, IL</p>
+                            <ul class="resume__bullets">
+                                <li>Developed a multi-level curriculum integrating quantitative progress monitoring and resource management</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__item-header">
+                                <h5>Additional Roles</h5>
+                                <span class="resume__date">Aug 2010 &ndash; Jun 2014</span>
+                            </div>
+                            <p class="resume__detail">Student Teacher, Substitute Teacher, Program Assistant &mdash; built foundational project coordination, communication, and organizational skills applicable to finance and corporate settings.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume__section">
+                        <h4 class="resume__section-title">CORE SKILLS</h4>
+                        <div class="resume__skills-list">
+                            <p><strong>Languages:</strong> Spanish &amp; English</p>
+                            <p>Financial Reporting, Forecasting &amp; Variance Analysis, Data Analysis, Budgeting &amp; Scenario Planning, KPI Dashboard Development &amp; Data Visualization</p>
+                            <p>Business Process Improvement &amp; Project Management</p>
+                            <p>Training, Stakeholder Engagement &amp; Cross-Functional Collaboration</p>
+                            <p>Strong Presentation &amp; Communication Skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <!--==================== CONTACT ====================-->
+                <section class="contact section" id="contact">
+                            <div class="contact__container container grid">
+                                            <div class="contact__content">
+                                                                <h2 class="section__title">Let's Connect</h2>
+                                                                <div class="section__subtitle-line"></div>
+                                            
+                                                                <p class="contact__description">
+                                                                    I'm actively seeking Data Analyst, BI, and Financial Analyst opportunities. If you'd like to discuss how my unique blend of teaching experience and data skills can add value to your team, I'd love to hear from you.
+                                                                </p>
+                                            
+                                                                <div class="contact__info">
+                                                                                        
+                                                                                        <div class="contact__info-item">
+                                                                                                                    <i class="ri-mail-line"></i>
+                                                                                                                    <div>
+                                                                                                                                                    <h3>Email</h3>
+                                                                                                                                                    <a href="mailto:amateomartz@gmail.com">amateomartz@gmail.com</a>
+                                                                                                                        </div>
+                                                                                            </div>
+                                                                </div>
+                                            
+                                                                <div class="contact__socials">
+                                                                                        <a href="https://www.linkedin.com/in/amateomartz/" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="LinkedIn">
+                                                                                                                    <i class="ri-linkedin-box-fill"></i>
+                                                                                                                    <span>LinkedIn</span>
+                                                                                            </a>
+                                                                                        <a href="https://github.com/amatmartz" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="GitHub">
+                                                                                                                    <i class="ri-github-fill"></i>
+                                                                                                                    <span>GitHub</span>
+                                                                                            </a>
+                                                                                        <a href="https://public.tableau.com/app/profile/alejandro.mateo/vizzes" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Tableau Public">
+                                                                                                                    <i class="ri-bar-chart-box-fill"></i>
+                                                                                                                    <span>Tableau</span>
+                                                                                            </a>
+                                                                </div>
+                                            </div>
+                            </div>
+                </section>
+    
+        
+        </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+            <div class="footer__container container">
+                        <span class="footer__copy">
+                                            &copy; 2026 Alejandro Mateo. All rights reserved.
+                        </span>
+            </div>
+    </footer>
+
+        <!--==================== SCROLL UP ====================-->
+        <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+                    <i class="ri-arrow-up-line"></i>
+        </a>
+
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
