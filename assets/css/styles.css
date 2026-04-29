@@ -558,6 +558,10 @@ img {
         background-color: #999;
 }
 
+.project__badge--python {
+        background-color: #3776ab;
+}
+
 .project__type {
         font-size: var(--smaller-font-size);
         color: var(--text-color-light);
